@@ -127,6 +127,7 @@ def main():
     for i in fc.contours:
         for point in fc.contours[i]:
             img[point[0], point[1]] = (0, 255, 0)
+    cv2.imwrite("./res/res.png", img)
     cv2.imshow("img", img)
     cv2.waitKey(0)
     # get a point map
