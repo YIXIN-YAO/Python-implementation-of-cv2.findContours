@@ -92,7 +92,7 @@ class FindContours:
                         self.board_follow([i, j], [i, j - 1], 1)
                         border_type = "Outer"
 
-                    elif self.grid[i][j] > 1 and self.grid[i][j + 1] == 0:
+                    elif self.grid[i][j] >= 1 and self.grid[i][j + 1] == 0:
                         border_type = "Hole"
                         self.NBD += 1
                         self.board_follow([i, j], [i, j + 1], 1)
